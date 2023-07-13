@@ -1,22 +1,35 @@
 package br.com.beatriz.car2.dto;
 
-public class CarDtoRequest {
-    private Long id;
+import javax.persistence.Column;
+
+public class CarDto {
+    private Long idChassi;
+
 
     private String name;
 
+
     private String brand;
+
 
     private String color;
 
+
     private String fabricationYear;
 
-    public Long getId() {
-        return id;
+    public CarDto(Long idChassi, String name, String brand, String color, String fabricationYear) {
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public CarDto() {
+
+    }
+
+    public Long getidChassi() {
+        return idChassi;
+    }
+
+    public void setId(Long idChassi) {
+        this.idChassi = idChassi;
     }
 
     public String getName() {

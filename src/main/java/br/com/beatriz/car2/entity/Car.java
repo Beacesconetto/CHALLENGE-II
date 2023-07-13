@@ -8,34 +8,34 @@ public class Car {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private Long id;
-
+    private Long idChassi;
+    @Column(nullable = false)
     private String name;
 
+    @Column(nullable = false)
     private String brand;
 
+    @Column(nullable = false)
     private String color;
 
+    @Column(nullable = false)
     private String fabricationYear;
 
-    public Car(Long id, String name, String brand, String color, String fabricationYear) {
-        this.id = id;
+    public Car() {
+        this.idChassi = idChassi;
         this.name = name;
         this.brand = brand;
         this.color = color;
         this.fabricationYear = fabricationYear;
     }
 
-    public Car() {
 
+    public Long getidChassi() {
+        return idChassi;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
+    public void setidChassi(Long idChassi) {
+        this.idChassi = idChassi;
     }
 
     public String getName() {
@@ -81,7 +81,7 @@ public class Car {
     @Override
     public String toString() {
         return "Car{" +
-                "id=" + id +
+                "idChassi=" + idChassi +
                 ", name='" + name + '\'' +
                 ", brand='" + brand + '\'' +
                 ", color='" + color + '\'' +
