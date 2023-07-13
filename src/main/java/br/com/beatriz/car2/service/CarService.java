@@ -20,7 +20,7 @@ public class CarService {
         this.carRepository = carRepository;
     }
     public void registerCar(CarDto carDto) {
-        // Aplicar a regra 1 - Validar a marca do carro
+
         if (!isValidBrand(carDto.getBrand())) {
             throw new IllegalArgumentException("Invalid car brand");
         }
