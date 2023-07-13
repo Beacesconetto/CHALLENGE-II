@@ -1,13 +1,6 @@
-package br.com.beatriz.car2.entity;
+package br.com.beatriz.car2.dto;
 
-import javax.persistence.*;
-
-@Entity
-@Table(name = "CarTable")
-public class Car {
-
-    @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+public class CarDtoRequest {
     private Long id;
 
     private String name;
@@ -18,18 +11,6 @@ public class Car {
 
     private String fabricationYear;
 
-    public Car(Long id, String name, String brand, String color, String fabricationYear) {
-        this.id = id;
-        this.name = name;
-        this.brand = brand;
-        this.color = color;
-        this.fabricationYear = fabricationYear;
-    }
-
-    public Car() {
-
-    }
-
     public Long getId() {
         return id;
     }
@@ -39,53 +20,34 @@ public class Car {
     }
 
     public String getName() {
-
         return name;
     }
 
     public void setName(String name) {
-
         this.name = name;
     }
 
     public String getBrand() {
-
         return brand;
     }
 
     public void setBrand(String brand) {
-
         this.brand = brand;
     }
 
     public String getColor() {
-
         return color;
     }
 
     public void setColor(String color) {
-
         this.color = color;
     }
 
     public String getFabricationYear() {
-
         return fabricationYear;
     }
 
     public void setFabricationYear(String fabricationYear) {
-
         this.fabricationYear = fabricationYear;
-    }
-
-    @Override
-    public String toString() {
-        return "Car{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", brand='" + brand + '\'' +
-                ", color='" + color + '\'' +
-                ", fabricationYear='" + fabricationYear + '\'' +
-                '}';
     }
 }
