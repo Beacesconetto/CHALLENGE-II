@@ -1,20 +1,24 @@
 package br.com.beatriz.car2.dto;
 
-import javax.persistence.Column;
+
+import javax.validation.constraints.NotBlank;
+
 
 public class CarDto {
+
+
     private Long idChassi;
 
-
+    @NotBlank
     private String name;
 
-
+    @NotBlank
     private String brand;
 
-
+    @NotBlank
     private String color;
 
-
+    @NotBlank
     private String fabricationYear;
 
     public CarDto(Long idChassi, String name, String brand, String color, String fabricationYear) {
@@ -28,7 +32,7 @@ public class CarDto {
         return idChassi;
     }
 
-    public void setId(Long idChassi) {
+    public void setidChassi(Long idChassi) {
         this.idChassi = idChassi;
     }
 
@@ -63,4 +67,5 @@ public class CarDto {
     public void setFabricationYear(String fabricationYear) {
         this.fabricationYear = fabricationYear;
     }
+
 }

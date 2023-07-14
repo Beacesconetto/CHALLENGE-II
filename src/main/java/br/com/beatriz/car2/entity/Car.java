@@ -1,6 +1,9 @@
 package br.com.beatriz.car2.entity;
 
+import com.sun.istack.NotNull;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "CarTable")
@@ -9,16 +12,17 @@ public class Car {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long idChassi;
-    @Column(nullable = false)
+
+    @NotBlank
     private String name;
 
-    @Column(nullable = false)
+    @NotBlank
     private String brand;
 
-    @Column(nullable = false)
+    @NotBlank
     private String color;
 
-    @Column(nullable = false)
+    @NotBlank
     private String fabricationYear;
 
     public Car() {
