@@ -3,7 +3,6 @@ package br.com.beatriz.car2.controller;
 import br.com.beatriz.car2.dto.CarDto;
 import br.com.beatriz.car2.entity.Car;
 import br.com.beatriz.car2.service.CarService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +15,8 @@ public class CarController {
     private final CarService carService;
 
     public CarController(CarService carService) {
-        this.carService = carService;
+        this.carService
+                = carService;
     }
 
     @PostMapping("/post")
@@ -31,8 +31,8 @@ public class CarController {
 
 
     @GetMapping("/get/{idChassi}")
-    public ResponseEntity<CarDto> getCarByChassi(@PathVariable Long idChassi) {
-        CarDto carDto = carService.getCarByChassi(idChassi);
-        return ResponseEntity.ok(carDto);
+    public ResponseEntity<Car> getCarByChassi(@PathVariable Long idChassi) {
+        Car carDto = carService.getCarByChassi(idChassi);
+               return ResponseEntity.ok(carDto);
     }
 }

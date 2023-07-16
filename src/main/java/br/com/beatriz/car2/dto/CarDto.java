@@ -21,6 +21,7 @@ public class CarDto {
     @NotBlank
     private String fabricationYear;
 
+
     public CarDto(Long idChassi, String name, String brand, String color, String fabricationYear) {
     }
 
@@ -29,26 +30,32 @@ public class CarDto {
     }
 
     public Long getidChassi() {
+
         return idChassi;
     }
 
     public void setidChassi(Long idChassi) {
+
         this.idChassi = idChassi;
     }
 
     public String getName() {
+
         return name;
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
     public String getBrand() {
+
         return brand;
     }
 
     public void setBrand(String brand) {
+
         this.brand = brand;
     }
 
